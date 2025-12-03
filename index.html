@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <title>Frozen World - Thế Giới Băng Giá Arendelle</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- W3CSS & Icons -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- File CSS riêng -->
+    <link rel="stylesheet" href="thaykha.css">
+</head>
+
+<body class="w3-light-grey">
+
+<header>
+    <nav class="w3-bar w3-theme-frozen w3-card-4 w3-padding-small">
+        <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="openMobileMenu()" title="Toggle Navigation">
+            <i class="fa fa-bars"></i>
+        </a>
+        <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+        <a href="#story" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CÂU CHUYỆN</a>
+        <a href="#characters" class="w3-bar-item w3-button w3-padding-large w3-hide-small">NHÂN VẬT</a>
+        <a href="#gallery" class="w3-bar-item w3-button w3-padding-large w3-hide-small">BỘ SƯU TẬP</a>
+        <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">LIÊN HỆ</a>
+        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right">
+            <i class="fa fa-search"></i>
+        </a>
+    </nav>
+
+    <div id="myNavbar" class="w3-bar-block w3-theme-frozen w3-hide w3-hide-large w3-hide-medium w3-animate-opacity">
+        <a href="#story" class="w3-bar-item w3-button w3-padding-large" onclick="closeMobileMenu()">CÂU CHUYỆN</a>
+        <a href="#characters" class="w3-bar-item w3-button w3-padding-large" onclick="closeMobileMenu()">NHÂN VẬT</a>
+        <a href="#gallery" class="w3-bar-item w3-button w3-padding-large" onclick="closeMobileMenu()">BỘ SƯU TẬP</a>
+        <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="closeMobileMenu()">LIÊN HỆ</a>
+    </div>
+</header>
+
+<main>
+
+ <div class="carousel">
+    <img src="./bg3.jpg" class="active">
+    <img src="./bg2.jpg">
+
+    <button class="prev" onclick="prevImage()">&#10094;</button>
+    <button class="next" onclick="nextImage()">&#10095;</button>
+
+    <div class="dots">
+        <span onclick="setSlide(0)" class="active-dot"></span>
+        <span onclick="setSlide(1)"></span>
+    
+    </div>
+</div>
+
+<script>
+    const imgs = document.querySelectorAll('.carousel img');
+    const dots = document.querySelectorAll('.dots span');
+    let index = 0;
+
+    function showSlide(i) {
+        imgs.forEach((img, idx) => {
+            img.classList.toggle('active', idx === i);
+            dots[idx].classList.toggle('active-dot', idx === i);
+        });
+    }
+
+    function nextImage() {
+        index = (index + 1) % imgs.length;
+        showSlide(index);
+    }
+
+    function prevImage() {
+        index = (index - 1 + imgs.length) % imgs.length;
+        showSlide(index);
+    }
+
+    function setSlide(i) {
+        index = i;
+        showSlide(index);
+    }
+
+</script>
+
+        <section id="story" class="w3-container w3-content w3-center w3-padding-64 section-max">
+              <i class="fas fa-snowflake snowflake"></i>
+            <h2 class="w3-wide w3-text-frozen-dark">CÂU CHUYỆN FROZEN</h2>
+            <p class="w3-opacity"><i>Lòng dũng cảm và Tình yêu đích thực</i></p>
+            <p class="w3-justify">Frozen là câu chuyện về hai chị em hoàng gia Anna và Elsa tại Arendelle, nơi Elsa nắm giữ sức mạnh băng giá phi thường nhưng bị cô lập vì nỗi sợ hãi. Trong ngày đăng quang, sức mạnh ấy bộc phát, vô tình bao trùm vương quốc trong mùa đông vĩnh cửu, 
+                buộc Elsa phải bỏ trốn. Công chúa Anna dũng cảm, cùng với người bán băng Kristoff, tuần lộc Sven và người tuyết Olaf hồn nhiên, bắt đầu cuộc phiêu lưu nguy hiểm để tìm Elsa và phá bỏ lời nguyền. Hành trình này không chỉ là cuộc săn lùng phép thuật, mà là sự đối mặt 
+                với những bí mật và nỗi sợ hãi sâu kín nhất. Quan trọng hơn, đây không chỉ là một câu chuyện cổ tích đơn thuần, mà là bản tuyên ngôn cảm động về Tình Yêu Đích Thực—chính là sự hy sinh vô điều kiện của tình chị em—dạy cho chúng ta bài học vĩ đại về sự chấp nhận bản thân 
+                và sức mạnh của tình thân.</p>
+        </section>
+
+        <section id="characters" class="w3-black w3-container w3-content w3-padding-64 section-max">
+            <h2 class="w3-wide w3-center">CÁC NHÂN VẬT CHÍNH</h2>
+            <p class="w3-opacity w3-center"><i>Gặp gỡ những người hùng của Arendelle</i></p><br>
+
+            <div class="w3-row-padding w3-padding-32 character-grid">
+                <div class="w3-third w3-margin-bottom w3-center">
+                    <h3 class="w3-opacity w3-text-white">Elsa</h3>
+                    <img src="./elsa.jpeg" class="character-img" alt="Elsa">
+                    <p>Nữ hoàng Elsa sở hữu sức mạnh băng giá phi thường và phải đấu tranh để chấp nhận bản ngã của mình. Sau hành trình tự cô lập, 
+                        cô học cách kiểm soát sức mạnh và tìm thấy tự do thông qua tình yêu thương và sự thấu hiểu.</p>
+                </div>
+
+                <div class="w3-third w3-margin-bottom w3-center">
+                    <h3 class="w3-opacity w3-text-white">Anna</h3>
+                    <img src="./anna.jpeg" class="character-img" alt="Anna">
+                    <p>Công chúa Anna là hiện thân của lòng dũng cảm, sự lạc quan và tình yêu thương vô bờ bến. 
+                        Cô đã chứng minh rằng Tình yêu đích thực có thể đến từ sự hy sinh cao cả nhất của tình gia đình.</p>
+                </div>
+
+                <div class="w3-third w3-margin-bottom w3-center">
+                    <h3 class="w3-opacity w3-text-white">Olaf</h3>
+                    <img src="./ola.jpg" class="character-img" alt="Olaf">
+                    <p>Olaf là người tuyết hồn nhiên, luôn mang lại tiếng cười và khao khát những cái ôm ấm áp. Dù chỉ là người tuyết, 
+                        Olaf là biểu tượng của tình bạn thuần khiết và
+                         dạy cho mọi người bài học về sự lạc quan và tình yêu thương vô điều kiện.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+
+  
+  <div class="item" onclick="window.location.href='https://movies.disney.com/frozen';">
+    <img src="./f1.jpeg" alt="Frozen 1">
+    <div class="title">Frozen 1 (2013)</div>
+    </div>
+
+    <!-- FROZEN FEVER -->
+    <div class="item" onclick="window.location.href='https://www.imdb.com/title/tt4007502/';">
+        <img src="./frozenfever.png" alt="Frozen Fever">
+        <div class="title">Frozen Fever (2015)</div>
+    </div>
+
+    <!-- PHẦN 2 -->
+    <div class="item" onclick="window.location.href='https://movies.disney.com/frozen-2';">
+        <img src="./f2.jpeg" alt="Frozen 2">
+        <div class="title">Frozen 2 (2019)</div>
+    </div>
+
+</div>
+
+
+        <section id="gallery" class="w3-container w3-padding-64 w3-center">
+            <h2 class="w3-wide w3-text-frozen-dark">BỘ SƯU TẬP CẢNH QUAN</h2>
+            <p class="w3-opacity"><i>Những khoảnh khắc đẹp nhất</i></p>
+
+            <div class="w3-row-padding w3-section gallery-grid">
+                <div class="w3-third">
+                    <img src="./anh1.jpg" class="gallery-img" onclick="openModal('Lâu Đài Băng')" alt="Lâu Đài Băng">
+                </div>
+
+                <div class="w3-third">
+                    <img src="./anh2.jpg" class="gallery-img" onclick="openModal('Cánh Rừng Phép Thuật')" alt="Cánh Rừng Phép Thuật">
+                </div>
+
+                <div class="w3-third">
+                    <img src="./anh3.jpg" class="gallery-img" onclick="openModal('Vương quốc Arendelle')" alt="Vương quốc Arendelle">
+                </div>
+            </div>
+
+            <div id="imageModal" class="w3-modal" onclick="closeModal()">
+                <span class="w3-button w3-large w3-black w3-display-topright">&times;</span>
+                <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+                    <img id="modalImage" class="w3-image modal-img">
+                    <p id="caption" class="w3-opacity w3-large w3-text-white"></p>
+                </div>
+            </div>
+        </section>
+
+<section id="soundtrack" class="soundtrack-section">
+     <i class="fas fa-music music-icon"></i>
+  <h2 class="section-title">NHẠC NỀN & BẢN GỐC</h2>
+  <p class="section-subtitle"><i>Âm nhạc là linh hồn của bộ phim</i></p>
+
+  <div class="songs-container">
+
+    <div class="song">
+      <p><strong>Let It Go</strong> — Frozen (2013)</p>
+      <audio controls>
+        <source src="./Let It Go.mp3" type="audio/mpeg">
+        Trình duyệt của bạn không hỗ trợ thẻ audio.
+      </audio>
+    </div>
+
+    <div class="song">
+      <p><strong>Do You Want to Build a Snowman?</strong> — Frozen (2013)</p>
+      <audio controls>
+        <source src="./Do You Want To Build A Snowman_.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+
+    <div class="song">
+      <p><strong>For The First Time In Forever</strong> — Frozen (2013)</p>
+      <audio controls>
+        <source src="./For The First Time In Forever.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+
+  </div>
+</section>
+
+  </div>
+</section>
+
+        <section id="contact" class="w3-container w3-content w3-padding-64 section-max">
+            <h2 class="w3-wide w3-center w3-text-frozen-dark">LIÊN HỆ VỚI VƯƠNG QUỐC</h2>
+
+            <div class="w3-row w3-padding-32">
+                <div class="w3-col m6 w3-large w3-margin-bottom">
+                    <i class="fa fa-map-marker"></i> Arendelle, Na Uy<br>
+                    <i class="fa fa-phone"></i> +00 15191993<br>
+                    <i class="fa fa-envelope"></i> info@frozenworld.com<br>
+                </div>
+
+                <div class="w3-col m6">
+                    <form action="#" target="_blank">
+                        <div class="w3-row-padding w3-margin-bottom w3-contact-grid">
+                            <div class="w3-half">
+                                <input id="contact-name" class="w3-input w3-border w3-round" type="text" placeholder="Tên của bạn" required>
+                            </div>
+
+                            <div class="w3-half">
+                                <input id="contact-email" class="w3-input w3-border w3-round" type="email" placeholder="Email" required>
+                            </div>
+                        </div>
+
+                        <input id="contact-message" class="w3-input w3-border w3-round w3-margin-bottom" type="text" placeholder="Lời nhắn" required>
+                        <button class="w3-button w3-theme-frozen w3-round w3-right">GỬI</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+<footer class="frozen-footer">
+    <div class="footer-content">
+        <h2 class="logo">❄ Frozen Website</h2>
+
+        <p class="desc">
+            Trang web Frozen của bạn – nơi cảm hứng băng giá bắt đầu.
+        </p>
+
+        <div class="footer-links">
+            <a href="#">Trang chủ</a>
+            <a href="#">Giới thiệu</a>
+            <a href="#">Dịch vụ</a>
+            <a href="#">Liên hệ</a>
+        </div>
+
+        <div class="social">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+
+        <p class="copyright">© 2025 Frozen Website. All Rights Reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>

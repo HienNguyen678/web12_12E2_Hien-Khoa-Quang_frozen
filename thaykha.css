@@ -1,0 +1,246 @@
+ .carousel {
+            position: relative;
+            width: 100%;
+            height: 100vh; /* toàn màn hình */
+            overflow: hidden;
+        }
+
+        .carousel img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* ảnh đầy màn hình */
+            display: none;
+        }
+
+        .carousel img.active {
+            display: block;
+            animation: fade 1s ease-in-out;
+        }
+
+        @keyframes fade {
+            from { opacity: 0.4; }
+            to { opacity: 1; }
+        }
+
+        /* Button trái/phải */
+        .carousel button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 18px 24px;
+            background: rgba(0,0,0,0.4);
+            color: white;
+            border: none;
+            font-size: 30px;
+            cursor: pointer;
+            border-radius: 50%;
+            transition: 0.3s;
+        }
+
+        .carousel button:hover {
+            background: rgba(0,0,0,0.7);
+        }
+
+        .prev { left: 30px; }
+        .next { right: 30px; }
+
+        /* Chấm tròn dưới slider */
+        .dots {
+            position: absolute;
+            bottom: 25px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .dots span {
+            height: 12px;
+            width: 12px;
+            margin: 0 5px;
+            background-color: #bbb;
+            display: inline-block;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .dots .active-dot {
+            background-color: white;
+        }
+.wrapper {
+    max-width: 2000px;
+    margin-top: 46px;
+}
+
+.section-max {
+    max-width: 800px;
+}
+
+.slide-img {
+    width: 100%;
+}
+
+
+.character-img {
+    width: 80%;
+    max-width: 250px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+.gallery-img {
+    width: 100%;
+    cursor: pointer;
+}
+
+.modal-img {
+    max-width: 90%;
+    height: auto;
+}
+
+
+.w3-theme-frozen {
+    background-color: #6ECFF6 !important;
+}
+
+.w3-text-frozen-dark {
+    color: #005A80 !important;
+}
+
+.w3-contact-grid .w3-half {
+    padding: 0 8px;
+}
+
+
+.highlight-text {
+    font-size: 18px;
+    font-weight: 600;
+    text-shadow: 1px 1px 3px #000;
+}
+
+.container {
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+    .item {
+        width: 250px;
+        cursor: pointer;
+        transition: 0.25s;
+    }
+    .item:hover {
+        transform: scale(1.07);
+    }
+    .item img {
+        width: 100%;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    }
+    .title {
+        margin-top: 10px;
+        font-size: 17px;
+        font-weight: bold;
+        color: #1c3f66;
+    }
+
+.soundtrack-section {
+    padding: 40px 20px;
+    background-color: #f0f8ff;
+    text-align: center;
+}
+
+.section-title {
+    color: #1c3f66;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.songs-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.song {
+    text-align: center;
+}
+
+
+audio {
+    margin-top: 10px;
+    width: 300px;
+    outline: none;
+}
+
+.frozen-footer {
+    background: linear-gradient(180deg, #a4ddf5, #5ba8d1);
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+.frozen-footer::before {
+    content: "❄ ❄ ❄";
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 28px;
+    opacity: 0.3;
+}
+
+.frozen-footer .logo {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.footer-content .desc {
+    margin: 10px 0 20px;
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.footer-links {
+    margin: 15px 0;
+}
+
+.footer-links a {
+    color: white;
+    margin: 0 12px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    text-shadow: 0 0 8px white;
+}
+
+.social a {
+    margin: 0 8px;
+    color: white;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.social a:hover {
+    transform: scale(1.2);
+    color: #e0f8ff;
+}
+
+copyright {
+    margin-top: 25px;
+    font-size: 13px;
+    opacity: 0.8;
+}
